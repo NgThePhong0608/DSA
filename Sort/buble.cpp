@@ -1,5 +1,11 @@
 #include <iostream>
 
+void swab(int &a.int &b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
 void buble(int *a, int n)
 {
     for (int i = 0; i < n - 1; i++)
@@ -8,9 +14,7 @@ void buble(int *a, int n)
         {
             if (a[j] > a[j + 1])
             {
-                int temp = a[j];
-                a[j] = a[j + 1];
-                a[j + 1] = temp;
+                swab(a[j], a[j + 1]);
             }
         }
     }
